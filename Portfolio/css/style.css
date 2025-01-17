@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
+
+/* Estilos gerais */
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+
+.header {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    height: 50px; /* Ajuste do tamanho do logo */
+    width: auto;
+    margin-right: 15px;
+}
+
+.header h1 {
+    font-size: 1.8rem;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff !important;
+}
+
+.navbar-nav .nav-link {
+    font-family: 'Orbitron', sans-serif;
+    color: #fff !important;
+    font-size: 1.2rem;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #00aaff !important;
+}
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: 'Orbitron', sans-serif;
+    transition: color 0.3s;
+}
+.nav-menu li a:hover {
+    color: #00aaff; /* Efeito hover */
+}
+.full-name {
+    font-size: 1.2rem; /* Reduz o tamanho do nome */
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    white-space: nowrap;
+    background: none; /* Remove qualquer fundo claro */
+    position: relative;
+    top: 3px; /* Move um pouco mais para baixo */
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin-top: 80px;
+    background: url('../img/background.png') center/cover no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-section h1, .hero-section p {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.hero-section h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #ccc;
+}
+
+
+/* Ajuste da Seção Sobre Mim */
+#sobre {
+    padding: 80px 0;
+    text-align: center;
+}
+
+#sobre img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 50%;
+    margin: auto;
+    display: block;
+    box-shadow: 0px 0px 15px rgba(0, 170, 255, 0.5);
+}
+
+#sobre h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #00aaff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#sobre p {
+    font-size: 1.2rem;
+    text-align: justify;
+    color: #ccc;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Estilos da Timeline */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 170, 255, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.timeline-item:hover {
+    transform: scale(1.02);
+}
+
+.timeline-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #00aaff;
+    border-radius: 50%;
+    margin-right: 15px;
+    overflow: hidden;
+}
+
+.timeline-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.timeline-content {
+    flex-grow: 1;
+}
+
+.timeline-content h3 {
+    font-size: 1.5rem;
+    margin: 0 0 5px;
+    color: #00aaff;
+}
+
+.timeline-content p {
+    font-size: 1rem;
+    margin: 0;
+    color: #ccc;
+}
+
+.timeline-tag {
+    display: inline-block;
+    background: #00aaff;
+    color: #fff;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Projetos */
+.projects-section {
+    padding: 50px;
+    text-align: center;
+}
+
+.projects-section h2 {
+    font-size: 3rem;
+    color: #00aaff;
+    margin-bottom: 30px;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-card {
+    background: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 400px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 170, 255, 0.5);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.project-card h3 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-top: 15px;
+}
+
+.project-card p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin: 10px 0;
+}
+
+.project-card a {
+    display: inline-block;
+    background: #00aaff;
+    color: #fff;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-card a:hover {
+    background: #0088cc;
+}
+
+/* Estilos da Secção de Skills */
+.skills-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 50px 0;
+}
+
+.hard-skills, .soft-skills {
+    width: 80%;
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.skill-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #222;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    transition: transform 0.3s;
+    min-width: 150px;
+}
+
+.skill-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(0, 170, 255, 0.5);
+}
+
+.skill-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+
+/* Estilos da Seção de Contato - Ajustando o fundo para uniformizar */
+.contact-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #121212; /* Cor de fundo ajustada para uniformizar */
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    color: #00aaff;
+    margin-bottom: 20px;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #1a1a1a; /* Fundo ajustado para combinar com o restante */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 170, 255, 0.3);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #00aaff;
+    border-radius: 5px;
+    background: #121212;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    background: #00aaff;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background: #0088cc;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-link {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.linkedin {
+    background: #0077b5;
+}
+
+.github {
+    background: #333;
+}
+
+.phone, .email {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.linkedin:hover {
+    background: #005f8a;
+}
+
+.github:hover {
+    background: #222;
+}
+
